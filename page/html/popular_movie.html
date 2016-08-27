@@ -1,0 +1,272 @@
+<head>
+    <style type="text/css">
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td,th{
+	height: 30px;
+	width: 120px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+th{
+	background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2}
+
+tr:hover {
+	background-color: #ddd
+}
+
+
+button {
+  display: inline-block;
+ 	padding: 3px 14px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 125px;
+  box-shadow: 0 3px #999;
+}
+
+button:hover {background-color: #3e8e41}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.button, .title{
+	padding: 10px;
+  margin: auto;
+  text-align: center;
+}
+.movie_title{
+  margin: auto;
+  font-size: 35px;
+  
+}
+.rating{
+  display:block-inline;
+
+  color: #cc3333;  
+}
+.normal{
+  border:1px solid black;
+  width:80%; 
+  margin:auto; 
+  margin-left:100px;
+  padding: 10px 20px 10px 20px;
+}
+
+a:link {
+    color: #117da9;
+    text-decoration: none;
+}
+a:visited {
+    color: #117da9;
+
+}
+a:hover {
+    color: #117da9;
+    text-decoration: underline;;
+}
+a:active {
+    color: #117da9;
+    text-decoration: underline;;
+}
+</style>
+<style type="text/css">
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td,th{
+	height: 30px;
+	width: 120px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+th{
+	background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2}
+
+tr:hover {
+	background-color: #ddd
+}
+
+
+button {
+  display: inline-block;
+ 	padding: 3px 14px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 125px;
+  box-shadow: 0 3px #999;
+}
+
+button:hover {background-color: #3e8e41}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.button, .title{
+	padding: 10px;
+  margin: auto;
+  text-align: center;
+}
+.movie_title{
+  margin: auto;
+  font-size: 35px;
+  
+}
+.rating{
+  display:block-inline;
+
+  color: #cc3333;  
+}
+.normal{
+  border:1px solid black;
+  width:80%; 
+  margin:auto; 
+  margin-left:100px;
+  padding: 10px 20px 10px 20px;
+}
+
+a:link {
+    color: #117da9;
+    text-decoration: none;
+}
+a:visited {
+    color: #117da9;
+
+}
+a:hover {
+    color: #117da9;
+    text-decoration: underline;;
+}
+a:active {
+    color: #117da9;
+    text-decoration: underline;;
+}
+</style>
+
+</head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/base/jquery-ui.css">
+<script type="text/javascript">
+$(document).ready(function()
+{   
+    $(".monthPicker").datepicker({
+        dateFormat: 'yy-mm-dd',
+        changeDay: false,
+        changeMonth: true,
+        changeYear: true,
+        showButtonPanel: true,
+
+        onChangeMonthYear: function(dateText, inst) {
+            var month = $("#ui-datepicker-div .ui-datepicker-month :selected").val();
+            var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+            $(this).val($.datepicker.formatDate('yy-mm-dd', new Date(year, month, 1)));
+        }
+    });
+
+    $(".monthPicker").focus(function () {
+        $(".ui-datepicker-calendar").hide();
+        $("#ui-datepicker-div").position({
+            my: "center top",
+            at: "center bottom",
+            of: $(this)
+        });
+    });
+});
+</script>
+
+<div class="button">
+<form action="index.php?manager-popular" method ="post">
+	<label for="month">Month: </label>
+	<input type="text" id="month" name="month" class="monthPicker" />
+	<button type="submit">view revenue</button>
+</form>
+</div>
+
+<table>
+	<tr>
+		<th>Month</th>
+		<th>Movie</th>
+        <th>#of Order</th>
+	</tr>
+	                <tr>
+        		<td>Dec</td>
+        		<td>null</td>
+        <td>null</td>
+	   </tr>
+               <tr>
+                <td></td>
+        		<td>null</td>
+        <td>null</td>
+	   </tr>
+               <tr>
+                <td></td>
+        		<td>null</td>
+        <td>null</td>
+	   </tr>
+       	                <tr>
+        		<td>Jan</td>
+        		<td>null</td>
+        <td>null</td>
+	   </tr>
+               <tr>
+                <td></td>
+        		<td>null</td>
+        <td>null</td>
+	   </tr>
+               <tr>
+                <td></td>
+        		<td>null</td>
+        <td>null</td>
+	   </tr>
+       	                <tr>
+        		<td>Mar</td>
+        		<td>null</td>
+        <td>null</td>
+	   </tr>
+               <tr>
+                <td></td>
+        		<td>null</td>
+        <td>null</td>
+	   </tr>
+               <tr>
+                <td></td>
+        		<td>null</td>
+        <td>null</td>
+	   </tr>
+       	</table>
+</br>
+<div class="button">
+<a href="index.php?manager-index"><button>index</button></a>
+</div>

@@ -1,0 +1,144 @@
+
+CREATE TABLE System(
+	cancellationFee VARCHAR(10) NOT NULL,
+	manager_password VARCHAR(50) NOT NULL,
+	senior_discount VARCHAR(10) NOT NULL,
+	child_discount VARCHAR(10) NOT NULL,
+	PRIMARY KEY (CancellationFee));
+
+CREATE TABLE User_group(
+	groupid int(32) not null,
+	role varchar(32) not null,
+	PRIMARY KEY (groupid)
+);
+
+CREATE TABLE User(
+	userid int(32) not null auto_increment,
+	username VARCHAR(50) NOT NULL,
+	password VARCHAR(50) NOT NULL,
+	email VARCHAR(50) NOT NULL,
+	groupid int(32) not null,
+	PRIMARY KEY (userid),
+	FOREIGN KEY (groupid) REFERENCES User_group(groupid) ON DELETE CASCADE
+	);
+
+
+CREATE TABLE Movie(
+	name VARCHAR(50) NOT NULL,
+	release_date date not null,
+	level varchar(20) not null,
+	duration varchar(20) not null,
+	type varchar(20) not null,
+
+	rating float NOT NULL,
+	num_of_rating float not null,
+	avai_unti date not null
+	PRIMARY KEY (name));
+
+Create table Movie_overview(
+	name VARCHAR(50) NOT NULL,
+	synopsis varchar (128) not null, 
+	cast varchar(128) not null,
+	PRIMARY KEY (name),
+	foreign key(name) references Movie(name) on update cascade on delete cascade
+);
+
+CREATE TABLE Theater(
+	name VARCHAR(50) NOT NULL,
+	City    VARCHAR(50) NOT NULL,
+	state    VARCHAR(10) NOT NULL,
+	address varchar(128) not null,
+	movie_name varchar(50) not null,
+	PRIMARY KEY (name,movie_name),
+	foreign key(movie_name) references Movie(name) on update cascade on delete cascade
+	);
+	
+
+CREATE TABLE saved_card(
+	number varchar(32) NOT NULL,
+	name VARCHAR(32) NOT NULL,
+ 	CVV NUMERIC(3) NOT NULL,
+ 	expiration DATE NOT NULL CHECK(expiration>CURDATE()),
+ 	userid int(32) NOT NULL,
+ 	PRIMARY KEY (number,userid),
+	FOREIGN KEY (userid) REFERENCES User(userid) ON DELETE CASCADE on update cascade);
+
+CREATE TABLE Review(
+	id INT( 32 ) NOT NULL AUTO_INCREMENT ,
+	user_name VARCHAR( 50 ) NOT NULL ,
+	movie_name VARCHAR( 50 ) NOT NULL ,
+	title VARCHAR( 32 ) NOT NULL ,
+	rating INT( 5 ) NOT NULL ,
+	COMMENT VARCHAR( 128 ) NOT NULL ,
+	PRIMARY KEY ( id ) ,
+	FOREIGN KEY ( user_name ) REFERENCES USER( username ) ON UPDATE CASCADE ,
+	FOREIGN KEY ( movie_name ) REFERENCES Movie( name ) ON DELETE CASCADE
+);
+
+CREATE TABLE order_detail(
+	id VARCHAR(64) NOT NULL,
+	movie_name VARCHAR(50) NOT NULL,
+	level varchar(20) not null,
+	duration varchar(20) not null,
+	date datetime not null,
+	price varchar(32) not null,
+	theater_name VARCHAR(50) NOT NULL,
+	theater_address varchar(128) not null,
+	num_of_ticket varchar(32) not null,
+	total_price double not null,
+	payment varchar(128) not null,
+	userid int(32),
+	status varchar(32),
+	refund double not null,
+	PRIMARY KEY(id),
+	FOREIGN KEY(movie_name) REFERENCES User(username) ON update CASCADE,
+	FOREIGN KEY(userid) REFERENCES User(userid) ON update CASCADE);
+
+
+
+
+CREATE TABLE saved_theater(
+	name varchar(50),
+	address varchar(128),
+	userid int(32),
+	movie_name varchar(50),
+	PRIMARY KEY(name,userid),
+	FOREIGN KEY(userid) REFERENCES User(userid) ON update CASCADE,
+	FOREIGN KEY(name) REFERENCES Theater(name) ON update CASCADE);
+
+
+
+CREATE TABLE movie_time(
+	movie_name VARCHAR(50) NOT NULL,
+	theater_name VARCHAR(50) NOT NULL,
+	movie_time VARCHAR(128) NOT NULL,
+	date date not null,
+	ava_until date not null,
+	ticket_price varchar(16) not null,
+	same_shedule int(4) default 1 not null,
+	PRIMARY KEY(movie_name, theater_name, date),
+	FOREIGN KEY(theater_name) REFERENCES Theater(name) ON update CASCADE,
+	FOREIGN KEY(movie_name) REFERENCES Movie(name) ON update CASCADE);
+
+create table session(
+	sessionid varchar(32) not null,
+	sessionuserid int(32) not null,
+	sessionpassword varchar(50) not null,
+	sessionemail varchar(50) not null,
+	sessiongroupid int(32) not null,
+	sessionmodifytine varchar(32) not null,
+	sessionstatus int(4) not null,
+	PRIMARY KEY(sessionid),
+	FOREIGN KEY(sessionuserid) REFERENCES User(userid) ON update CASCADE,
+);
+
+create table theater_list(
+	name varchar(50) not null,
+	state varchar(10) not null,
+	city varchar(50) not null,
+	address varchar(128) not null,
+	PRIMARY KEY (name,state,city,address));
+	
+	
+
+

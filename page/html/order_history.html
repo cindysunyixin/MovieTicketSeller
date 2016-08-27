@@ -1,0 +1,435 @@
+<style type="text/css">
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td,th{
+	height: 30px;
+	width: 120px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+th{
+	background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2}
+
+tr:hover {
+	background-color: #ddd
+}
+
+
+button {
+  display: inline-block;
+ 	padding: 3px 14px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 125px;
+  box-shadow: 0 3px #999;
+}
+
+button:hover {background-color: #3e8e41}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.button, .title{
+	padding: 10px;
+  margin: auto;
+  text-align: center;
+}
+.movie_title{
+  margin: auto;
+  font-size: 35px;
+  
+}
+.rating{
+  display:block-inline;
+
+  color: #cc3333;  
+}
+.normal{
+  border:1px solid black;
+  width:80%; 
+  margin:auto; 
+  margin-left:100px;
+  padding: 10px 20px 10px 20px;
+}
+
+a:link {
+    color: #117da9;
+    text-decoration: none;
+}
+a:visited {
+    color: #117da9;
+
+}
+a:hover {
+    color: #117da9;
+    text-decoration: underline;;
+}
+a:active {
+    color: #117da9;
+    text-decoration: underline;;
+}
+</style>
+<style type="text/css">
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td,th{
+	height: 30px;
+	width: 120px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+th{
+	background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2}
+
+tr:hover {
+	background-color: #ddd
+}
+
+
+button {
+  display: inline-block;
+ 	padding: 3px 14px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 125px;
+  box-shadow: 0 3px #999;
+}
+
+button:hover {background-color: #3e8e41}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.button, .title{
+	padding: 10px;
+  margin: auto;
+  text-align: center;
+}
+.movie_title{
+  margin: auto;
+  font-size: 35px;
+  
+}
+.rating{
+  display:block-inline;
+
+  color: #cc3333;  
+}
+.normal{
+  border:1px solid black;
+  width:80%; 
+  margin:auto; 
+  margin-left:100px;
+  padding: 10px 20px 10px 20px;
+}
+
+a:link {
+    color: #117da9;
+    text-decoration: none;
+}
+a:visited {
+    color: #117da9;
+
+}
+a:hover {
+    color: #117da9;
+    text-decoration: underline;;
+}
+a:active {
+    color: #117da9;
+    text-decoration: underline;;
+}
+</style>
+
+
+<div class="normal">
+	<div class="title">
+	<span class='movie_title'><b>Order History</b></span>
+</div>
+
+
+<form action"index.php?app-order_history" method="post">
+	<div class="button">
+	<span>Order ID:</span>&nbsp<input type="text" name="id" msg="xxx"/> <button type="submit">search</button>
+	</div>
+
+</br>
+	<table >
+		<tr>
+			<th colspan="2">&nbspSelect&nbsp</th>
+			
+			<th colspan="2">&nbsp&nbspOrder ID&nbsp&nbsp</th>
+			
+			<th colspan="2">&nbsp&nbspMovie&nbsp&nbsp</th>
+			<th colspan="2">&nbsp&nbsp Status &nbsp&nbsp</th>
+			
+			<th colspan="2">Total Cost</th>
+			<th colspan="2">Refund</th>
+		</tr>
+		</table>
+</form>
+	<form action"index.php?app-order_history" method="post" style="margin-top:-17px">
+		<table>
+				<tr>
+			<td colspan="2"><input type="radio" value="579585aas193b27" name="select"></td>	
+			<td colspan="2">579585aas193b27&nbsp&nbsp</td>	
+			
+			<td colspan="2">&nbspLights Out</td>	
+			
+			<td colspan="2">&nbspCancelled</td>	
+			
+			<td colspan="2">&nbsp &nbsp34.62</td>	
+			<td colspan="2">&nbsp &nbsp0</td>	
+		</tr>
+				<tr>
+			<td colspan="2"><input type="radio" value="5795973aeb4a3" name="select"></td>	
+			<td colspan="2">5795973aeb4a3&nbsp&nbsp</td>	
+			
+			<td colspan="2">&nbspZootopia</td>	
+			
+			<td colspan="2">&nbspComplete</td>	
+			
+			<td colspan="2">&nbsp &nbsp23.08</td>	
+			<td colspan="2">&nbsp &nbsp0</td>	
+		</tr>
+				<tr>
+			<td colspan="2"><input type="radio" value="57959797d6675" name="select"></td>	
+			<td colspan="2">57959797d6675&nbsp&nbsp</td>	
+			
+			<td colspan="2">&nbspZootopia</td>	
+			
+			<td colspan="2">&nbspCancelled</td>	
+			
+			<td colspan="2">&nbsp &nbsp80.78</td>	
+			<td colspan="2">&nbsp &nbsp75.78</td>	
+		</tr>
+				<tr>
+			<td colspan="2"><input type="radio" value="579597ba776ed" name="select"></td>	
+			<td colspan="2">579597ba776ed&nbsp&nbsp</td>	
+			
+			<td colspan="2">&nbspThe Secret Life of Pets</td>	
+			
+			<td colspan="2">&nbspComplete</td>	
+			
+			<td colspan="2">&nbsp &nbsp46.16</td>	
+			<td colspan="2">&nbsp &nbsp0</td>	
+		</tr>
+				<tr>
+			<td colspan="2"><input type="radio" value="579597dd51fc6" name="select"></td>	
+			<td colspan="2">579597dd51fc6&nbsp&nbsp</td>	
+			
+			<td colspan="2">&nbspThe Secret Life of Pets</td>	
+			
+			<td colspan="2">&nbspUnused</td>	
+			
+			<td colspan="2">&nbsp &nbsp24.234</td>	
+			<td colspan="2">&nbsp &nbsp0</td>	
+		</tr>
+				<tr>
+			<td colspan="2"><input type="radio" value="5795981dc66c1" name="select"></td>	
+			<td colspan="2">5795981dc66c1&nbsp&nbsp</td>	
+			
+			<td colspan="2">&nbspThe Legend of Tarzan</td>	
+			
+			<td colspan="2">&nbspComplete</td>	
+			
+			<td colspan="2">&nbsp &nbsp31.158</td>	
+			<td colspan="2">&nbsp &nbsp0</td>	
+		</tr>
+				<tr>
+			<td colspan="2"><input type="radio" value="579598491eaa4" name="select"></td>	
+			<td colspan="2">579598491eaa4&nbsp&nbsp</td>	
+			
+			<td colspan="2">&nbspThe Legend of Tarzan</td>	
+			
+			<td colspan="2">&nbspUnused</td>	
+			
+			<td colspan="2">&nbsp &nbsp23.08</td>	
+			<td colspan="2">&nbsp &nbsp0</td>	
+		</tr>
+				<tr>
+			<td colspan="2"><input type="radio" value="5795986749bf4" name="select"></td>	
+			<td colspan="2">5795986749bf4&nbsp&nbsp</td>	
+			
+			<td colspan="2">&nbspStar Trek Beyond</td>	
+			
+			<td colspan="2">&nbspComplete</td>	
+			
+			<td colspan="2">&nbsp &nbsp78.472</td>	
+			<td colspan="2">&nbsp &nbsp0</td>	
+		</tr>
+				<tr>
+			<td colspan="2"><input type="radio" value="579598931fb21" name="select"></td>	
+			<td colspan="2">579598931fb21&nbsp&nbsp</td>	
+			
+			<td colspan="2">&nbspStar Trek Beyond</td>	
+			
+			<td colspan="2">&nbspUnused</td>	
+			
+			<td colspan="2">&nbsp &nbsp86.55</td>	
+			<td colspan="2">&nbsp &nbsp0</td>	
+		</tr>
+				<tr>
+			<td colspan="2"><input type="radio" value="579598ad7573a" name="select"></td>	
+			<td colspan="2">579598ad7573a&nbsp&nbsp</td>	
+			
+			<td colspan="2">&nbspLights Out</td>	
+			
+			<td colspan="2">&nbspComplete</td>	
+			
+			<td colspan="2">&nbsp &nbsp34.62</td>	
+			<td colspan="2">&nbsp &nbsp0</td>	
+		</tr>
+				<tr>
+			<td colspan="2"><input type="radio" value="579598c71b978" name="select"></td>	
+			<td colspan="2">579598c71b978&nbsp&nbsp</td>	
+			
+			<td colspan="2">&nbspLights Out</td>	
+			
+			<td colspan="2">&nbspUnused</td>	
+			
+			<td colspan="2">&nbsp &nbsp19.618</td>	
+			<td colspan="2">&nbsp &nbsp0</td>	
+		</tr>
+				<tr>
+			<td colspan="2"><input type="radio" value="579598dd09dc4" name="select"></td>	
+			<td colspan="2">579598dd09dc4&nbsp&nbsp</td>	
+			
+			<td colspan="2">&nbspIce Age: Collision Course</td>	
+			
+			<td colspan="2">&nbspComplete</td>	
+			
+			<td colspan="2">&nbsp &nbsp42.698</td>	
+			<td colspan="2">&nbsp &nbsp0</td>	
+		</tr>
+				<tr>
+			<td colspan="2"><input type="radio" value="579599180ffd7" name="select"></td>	
+			<td colspan="2">579599180ffd7&nbsp&nbsp</td>	
+			
+			<td colspan="2">&nbspIce Age: Collision Course</td>	
+			
+			<td colspan="2">&nbspUnused</td>	
+			
+			<td colspan="2">&nbsp &nbsp57.7</td>	
+			<td colspan="2">&nbsp &nbsp0</td>	
+		</tr>
+				<tr>
+			<td colspan="2"><input type="radio" value="5795994fa04ac" name="select"></td>	
+			<td colspan="2">5795994fa04ac&nbsp&nbsp</td>	
+			
+			<td colspan="2">&nbspGhostbusters</td>	
+			
+			<td colspan="2">&nbspComplete</td>	
+			
+			<td colspan="2">&nbsp &nbsp40.39</td>	
+			<td colspan="2">&nbsp &nbsp0</td>	
+		</tr>
+				<tr>
+			<td colspan="2"><input type="radio" value="5795996a047ad" name="select"></td>	
+			<td colspan="2">5795996a047ad&nbsp&nbsp</td>	
+			
+			<td colspan="2">&nbspGhostbusters</td>	
+			
+			<td colspan="2">&nbspUnused</td>	
+			
+			<td colspan="2">&nbsp &nbsp36.928</td>	
+			<td colspan="2">&nbsp &nbsp0</td>	
+		</tr>
+				<tr>
+			<td colspan="2"><input type="radio" value="57959988559a3" name="select"></td>	
+			<td colspan="2">57959988559a3&nbsp&nbsp</td>	
+			
+			<td colspan="2">&nbspFinding Dory</td>	
+			
+			<td colspan="2">&nbspComplete</td>	
+			
+			<td colspan="2">&nbsp &nbsp23.08</td>	
+			<td colspan="2">&nbsp &nbsp0</td>	
+		</tr>
+				<tr>
+			<td colspan="2"><input type="radio" value="579599abbf58e" name="select"></td>	
+			<td colspan="2">579599abbf58e&nbsp&nbsp</td>	
+			
+			<td colspan="2">&nbspFinding Dory</td>	
+			
+			<td colspan="2">&nbspUnused</td>	
+			
+			<td colspan="2">&nbsp &nbsp11.54</td>	
+			<td colspan="2">&nbsp &nbsp0</td>	
+		</tr>
+				<tr>
+			<td colspan="2"><input type="radio" value="5796618cab0df" name="select"></td>	
+			<td colspan="2">5796618cab0df&nbsp&nbsp</td>	
+			
+			<td colspan="2">&nbspGhostbusters</td>	
+			
+			<td colspan="2">&nbspCancelled</td>	
+			
+			<td colspan="2">&nbsp &nbsp36.928</td>	
+			<td colspan="2">&nbsp &nbsp31.928</td>	
+		</tr>
+				<tr>
+			<td colspan="2"><input type="radio" value="5796620a32f5d" name="select"></td>	
+			<td colspan="2">5796620a32f5d&nbsp&nbsp</td>	
+			
+			<td colspan="2">&nbspThe Secret Life of Pets</td>	
+			
+			<td colspan="2">&nbspUnused</td>	
+			
+			<td colspan="2">&nbsp &nbsp57.7</td>	
+			<td colspan="2">&nbsp &nbsp0</td>	
+		</tr>
+				<tr>
+			<td colspan="2"><input type="radio" value="57966260b1b14" name="select"></td>	
+			<td colspan="2">57966260b1b14&nbsp&nbsp</td>	
+			
+			<td colspan="2">&nbspThe Legend of Tarzan</td>	
+			
+			<td colspan="2">&nbspUnused</td>	
+			
+			<td colspan="2">&nbsp &nbsp11.54</td>	
+			<td colspan="2">&nbsp &nbsp0</td>	
+		</tr>
+		
+	</table>
+	</br>
+	<div class="button">
+		<button type="submit" name="detail" value="1">view detail</button>
+	</div>
+</form>
+
+<div class="button">
+	<a href='index.php?app-aboutme'><button>Back</button></a>
+</div>

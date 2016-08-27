@@ -1,0 +1,247 @@
+
+<script type="text/javascript">
+	function isNumberKey(evt){
+	    var charCode = (evt.which) ? evt.which : evt.keyCode
+	    return !(charCode > 31 && (charCode < 48 || charCode > 57));
+	}
+	function a($str,$r){
+
+		if($str == ""){
+			document.getElementById('txtHint').innerHTML="";
+			return;
+		}
+		
+		if(window.XMLHttpRequest){
+			$x = new XMLHttpRequest();
+		}
+		else{
+			$x = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		$x.onreadystatechange=function()
+		{	
+			if ($x.readyState==4 && $x.status==200)
+			{	
+				document.getElementById("result"+$r).innerHTML=$x.responseText;
+			}
+		}
+
+		$x.open("GET","index.php?app-price&a="+$str+'&b='+$r,true);
+		$x.send();
+	}
+	function test(){
+		alert(111);
+	}
+</script>
+<style type="text/css">
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td,th{
+	height: 30px;
+	width: 120px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+th{
+	background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2}
+
+tr:hover {
+	background-color: #ddd
+}
+
+
+button {
+  display: inline-block;
+ 	padding: 3px 14px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 125px;
+  box-shadow: 0 3px #999;
+}
+
+button:hover {background-color: #3e8e41}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.button, .title{
+	padding: 10px;
+  margin: auto;
+  text-align: center;
+}
+.movie_title{
+  margin: auto;
+  font-size: 35px;
+  
+}
+.rating{
+  display:block-inline;
+
+  color: #cc3333;  
+}
+.normal{
+  border:1px solid black;
+  width:80%; 
+  margin:auto; 
+  margin-left:100px;
+  padding: 10px 20px 10px 20px;
+}
+
+a:link {
+    color: #117da9;
+    text-decoration: none;
+}
+a:visited {
+    color: #117da9;
+
+}
+a:hover {
+    color: #117da9;
+    text-decoration: underline;;
+}
+a:active {
+    color: #117da9;
+    text-decoration: underline;;
+}
+</style>
+<style type="text/css">
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td,th{
+	height: 30px;
+	width: 120px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+th{
+	background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2}
+
+tr:hover {
+	background-color: #ddd
+}
+
+
+button {
+  display: inline-block;
+ 	padding: 3px 14px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 125px;
+  box-shadow: 0 3px #999;
+}
+
+button:hover {background-color: #3e8e41}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.button, .title{
+	padding: 10px;
+  margin: auto;
+  text-align: center;
+}
+.movie_title{
+  margin: auto;
+  font-size: 35px;
+  
+}
+.rating{
+  display:block-inline;
+
+  color: #cc3333;  
+}
+.normal{
+  border:1px solid black;
+  width:80%; 
+  margin:auto; 
+  margin-left:100px;
+  padding: 10px 20px 10px 20px;
+}
+
+a:link {
+    color: #117da9;
+    text-decoration: none;
+}
+a:visited {
+    color: #117da9;
+
+}
+a:hover {
+    color: #117da9;
+    text-decoration: underline;;
+}
+a:active {
+    color: #117da9;
+    text-decoration: underline;;
+}
+</style>
+<div class="normal">
+	<div class="title">
+	<span class='movie_title'>Buy Ticket</span>
+</div>
+
+<table class='but_ticket'>
+	
+	<tr style="width:40px;">
+		<td style="width:1140px;"><b>The Secret Life of Pets</b></td>
+		<td style="width:1140px;"><b>AMC1</b></td>
+	</tr>
+	</b>
+	<tr>
+		<td>PG 90 min</td>
+		<td>111 Peachtree St,30031, Atlanta, GA, , </td>
+	</tr>
+	
+	<tr>
+		<td><b>2016-07-28</b></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><b>1:40PM</b></td>
+		<td></td>
+	</tr>
+	</b>
+</table>
+</br></br>
+<span>How Many Ticket? </span>
+<form method="post" action="index.php?app-buyticket" style="margin-top:10px;">
+ Adult : &nbsp<input type="number" name="adult" onkeypress="return isNumberKey(event);" onkeyup="a(this.value,10);" min='0' onchange="a(this.value,10);" value='0' > &nbsp <span>*11.54 =</span><span id='result10'>0</span>
+</br>
+ Child : &nbsp<input type="number" name="child" onkeypress="return isNumberKey(event);" onkeyup="a(this.value,7);" min='0' onchange="a(this.value,7);" value='0'  style="margin-top:10px;"> &nbsp <span>*11.54*0.7 =</span><span id='result7'>0</span>
+</br>
+ Senior: <input type="number" name="senior" onkeypress="return isNumberKey(event);" onkeyup="a(this.value,8);" min='0' onchange="a(this.value,8);" value='0'  style="margin-top:10px;"> &nbsp <span>*11.54*0.8 =</span><span id='result8'>0</span>
+ <br/>
+ <button type="submit" name='next' value ='1'>Next</button>
+</form>
+

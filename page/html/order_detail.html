@@ -1,0 +1,83 @@
+<style type="text/css">
+tr{
+	display: block;
+	margin-top: 3px;
+}
+tr:nth-child(even) {background-color: #f2f2f2}
+
+tr:hover {
+	background-color: #ddd
+}
+tr td span{
+	display:inline-block; 
+	width: 120px;
+}
+
+button {
+  
+  display: inline-block;
+ 	padding: 3px 14px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 125px;
+  box-shadow: 0 3px #999;
+}
+
+button:hover {background-color: #3e8e41}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+div{
+	padding-bottom: 10px;
+}
+</style>
+<div style="text-align: center"></div>
+<table>
+	
+	<tr>
+		<td><b><span>Movie Name:</span> The Legend of Tarzan</b></td>
+	</tr>
+	<tr>
+		<td><b><span>Theater: </span>AMC1</b></td>
+	</tr>
+	<tr>
+		<td><b><span>Address: </span>111 Peachtree St,30031, Atlanta, GA, , </b></td>
+	</tr>
+	<tr>
+		<td><b><span>Level: </span>PG</b></td>
+	</tr>
+	<tr>
+		<td><b><span>Date: </span>Wednesday, Jul 27</b></td>
+		
+	</tr>
+	<tr>
+		<td><b><span>Time: </span>04:30 pm</b></td>
+	</tr>
+	<tr>
+		<td><b><span>Num of tickets: </span>Adult: 1, Child: 0, Senior: 0</b></td>		
+	</tr>
+	<tr>
+		<td><b><span>Total cost: </span>$11.54</b></td>
+	</tr>
+	<tr>
+		<td><b><span>Order status: </span>Unused</b></td>
+	</tr>
+		
+</table>
+</br></br>
+<form action="index.php?app-cancel" method="post">
+	<input type ="hidden" name='id' value = '57966260b1b14' > 
+<button type="submit">Cancel Odrder</button>
+</form>
+</br>
+</br>
+<a href='index.php?app-order_history'><button>Back</button></a>

@@ -1,0 +1,195 @@
+<script src="sweetalert_master/dist/sweetalert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="sweetalert_master/dist/sweetalert.css">
+<style type="text/css">
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td,th{
+	height: 30px;
+	width: 120px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+th{
+	background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2}
+
+tr:hover {
+	background-color: #ddd
+}
+
+
+button {
+  display: inline-block;
+ 	padding: 3px 14px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 125px;
+  box-shadow: 0 3px #999;
+}
+
+button:hover {background-color: #3e8e41}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.button, .title{
+	padding: 10px;
+  margin: auto;
+  text-align: center;
+}
+.movie_title{
+  margin: auto;
+  font-size: 35px;
+  
+}
+.rating{
+  display:block-inline;
+
+  color: #cc3333;  
+}
+.normal{
+  border:1px solid black;
+  width:80%; 
+  margin:auto; 
+  margin-left:100px;
+  padding: 10px 20px 10px 20px;
+}
+
+a:link {
+    color: #117da9;
+    text-decoration: none;
+}
+a:visited {
+    color: #117da9;
+
+}
+a:hover {
+    color: #117da9;
+    text-decoration: underline;;
+}
+a:active {
+    color: #117da9;
+    text-decoration: underline;;
+}
+</style>
+<style type="text/css">
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td,th{
+	height: 30px;
+	width: 120px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+th{
+	background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2}
+
+tr:hover {
+	background-color: #ddd
+}
+
+
+button {
+  display: inline-block;
+ 	padding: 3px 14px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 125px;
+  box-shadow: 0 3px #999;
+}
+
+button:hover {background-color: #3e8e41}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.button, .title{
+	padding: 10px;
+  margin: auto;
+  text-align: center;
+}
+.movie_title{
+  margin: auto;
+  font-size: 35px;
+  
+}
+.rating{
+  display:block-inline;
+
+  color: #cc3333;  
+}
+.normal{
+  border:1px solid black;
+  width:80%; 
+  margin:auto; 
+  margin-left:100px;
+  padding: 10px 20px 10px 20px;
+}
+
+a:link {
+    color: #117da9;
+    text-decoration: none;
+}
+a:visited {
+    color: #117da9;
+
+}
+a:hover {
+    color: #117da9;
+    text-decoration: underline;;
+}
+a:active {
+    color: #117da9;
+    text-decoration: underline;;
+}
+</style>
+<div class="normal">
+	<div class="title">
+	<span class='movie_title'>Result</span>
+</div>
+<form method="post" action="index.php?app-search_result">
+		<input type="radio" name="selected_theater" value="AMC1">&nbsp&nbsp AMC1</br>
+	<div>&nbsp&nbsp &nbsp&nbsp &nbsp111 Peachtree St,30031, Atlanta, GA</div>
+</br>
+		<input type="radio" name="selected_theater" value="AMC4">&nbsp&nbsp AMC4</br>
+	<div>&nbsp&nbsp &nbsp&nbsp &nbsp1910 Wells Rd,32073, Orange Park, FL</div>
+</br>
+		<input type="radio" name="selected_theater" value="Regal Cinemas Hollywood 24 @ North I-85">&nbsp&nbsp Regal Cinemas Hollywood 24 @ North I-85</br>
+	<div>&nbsp&nbsp &nbsp&nbsp &nbsp3265 NE Expy NE, Chamblee,30341, Atlanta, GA</div>
+</br>
+	</br>
+	<input type="checkbox" name="save" value='1'> <span>save this theater </span> &nbsp &nbsp 
+	<button type ="subbmit">Next</button>
+	<input type="hidden" name="next" value="1"/>
+</form>

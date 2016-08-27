@@ -1,0 +1,233 @@
+<script type="text/javascript">
+	function update_rand_code(){
+		//alert('222');
+    document.getElementById('rand').src="index.php?user-randcode&"+Math.random();
+} 
+</script>
+<style type="text/css">
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td,th{
+	height: 30px;
+	width: 120px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+th{
+	background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2}
+
+tr:hover {
+	background-color: #ddd
+}
+
+
+button {
+  display: inline-block;
+ 	padding: 3px 14px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 125px;
+  box-shadow: 0 3px #999;
+}
+
+button:hover {background-color: #3e8e41}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.button, .title{
+	padding: 10px;
+  margin: auto;
+  text-align: center;
+}
+.movie_title{
+  margin: auto;
+  font-size: 35px;
+  
+}
+.rating{
+  display:block-inline;
+
+  color: #cc3333;  
+}
+.normal{
+  border:1px solid black;
+  width:80%; 
+  margin:auto; 
+  margin-left:100px;
+  padding: 10px 20px 10px 20px;
+}
+
+a:link {
+    color: #117da9;
+    text-decoration: none;
+}
+a:visited {
+    color: #117da9;
+
+}
+a:hover {
+    color: #117da9;
+    text-decoration: underline;;
+}
+a:active {
+    color: #117da9;
+    text-decoration: underline;;
+}
+</style>
+<style type="text/css">
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td,th{
+	height: 30px;
+	width: 120px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+th{
+	background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2}
+
+tr:hover {
+	background-color: #ddd
+}
+
+
+button {
+  display: inline-block;
+ 	padding: 3px 14px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 125px;
+  box-shadow: 0 3px #999;
+}
+
+button:hover {background-color: #3e8e41}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.button, .title{
+	padding: 10px;
+  margin: auto;
+  text-align: center;
+}
+.movie_title{
+  margin: auto;
+  font-size: 35px;
+  
+}
+.rating{
+  display:block-inline;
+
+  color: #cc3333;  
+}
+.normal{
+  border:1px solid black;
+  width:80%; 
+  margin:auto; 
+  margin-left:100px;
+  padding: 10px 20px 10px 20px;
+}
+
+a:link {
+    color: #117da9;
+    text-decoration: none;
+}
+a:visited {
+    color: #117da9;
+
+}
+a:hover {
+    color: #117da9;
+    text-decoration: underline;;
+}
+a:active {
+    color: #117da9;
+    text-decoration: underline;;
+}
+</style>
+<body>
+
+<div class="row-fluid">
+	<div class="container logcontent">
+		<div class="logbox">
+			<form class="form-horizontal logform" method="post" action="index.php?user-login">
+				<fieldset>
+					<legend>login</legend>
+					<div class="logcontrol">
+						<div class="control-group">
+							<label class="control-label" for="inputEmail">uername: </label>
+							<div class="controls">
+								<input class="input-xlarge" type="text" name="args[username]" datatype="userName" needle="needle" />
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="inputPassword">password:</label>
+							<div class="controls">
+								<input class="input-xlarge" type="password" name="args[userpassword]" datatype="password" needle="needle" />
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="inputPassword">randcode:</label>
+							<div class="controls">
+								<input class="input-small" type="text" maxlength="4" name="args[randcode]"/>
+
+								<span><img src="index.php?user-randcode" class="randCode img-rounded" id="rand" onclick="update_rand_code();"/></span>
+							</div>
+						</div>
+					</br>
+						<div class="control-group">
+							<div class="controls">
+								<input type="hidden" value="1" name="login"/>
+								<button class="btn btn-info logbtn" type="submit">login</button>
+								
+							</div>
+						</div>
+						<div class="control-group">
+							<div class="controls">
+								
+							</div>
+						</div>
+					</div>
+				</fieldset>
+			</form>
+			<a href="index.php?user-register"> register</a>
+		</div>
+		<div class="logbotm"></div>
+	</div>
+</div>
+
+ </body>
+</html>

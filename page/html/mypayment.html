@@ -1,0 +1,233 @@
+
+<script type="text/javascript">
+	function a(button){
+		var radios = document.getElementsByClassName("example");
+		for (var i = 0; i < radios.length; i++) {
+    		if (radios[i].checked) {
+        		button.value = radios[i].value;
+    		}
+		}
+
+	}
+</script>
+<style type="text/css">
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td,th{
+	height: 30px;
+	width: 120px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+th{
+	background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2}
+
+tr:hover {
+	background-color: #ddd
+}
+
+
+button {
+  display: inline-block;
+ 	padding: 3px 14px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 125px;
+  box-shadow: 0 3px #999;
+}
+
+button:hover {background-color: #3e8e41}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.button, .title{
+	padding: 10px;
+  margin: auto;
+  text-align: center;
+}
+.movie_title{
+  margin: auto;
+  font-size: 35px;
+  
+}
+.rating{
+  display:block-inline;
+
+  color: #cc3333;  
+}
+.normal{
+  border:1px solid black;
+  width:80%; 
+  margin:auto; 
+  margin-left:100px;
+  padding: 10px 20px 10px 20px;
+}
+
+a:link {
+    color: #117da9;
+    text-decoration: none;
+}
+a:visited {
+    color: #117da9;
+
+}
+a:hover {
+    color: #117da9;
+    text-decoration: underline;;
+}
+a:active {
+    color: #117da9;
+    text-decoration: underline;;
+}
+</style>
+<style type="text/css">
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td,th{
+	height: 30px;
+	width: 120px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+th{
+	background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2}
+
+tr:hover {
+	background-color: #ddd
+}
+
+
+button {
+  display: inline-block;
+ 	padding: 3px 14px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 125px;
+  box-shadow: 0 3px #999;
+}
+
+button:hover {background-color: #3e8e41}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.button, .title{
+	padding: 10px;
+  margin: auto;
+  text-align: center;
+}
+.movie_title{
+  margin: auto;
+  font-size: 35px;
+  
+}
+.rating{
+  display:block-inline;
+
+  color: #cc3333;  
+}
+.normal{
+  border:1px solid black;
+  width:80%; 
+  margin:auto; 
+  margin-left:100px;
+  padding: 10px 20px 10px 20px;
+}
+
+a:link {
+    color: #117da9;
+    text-decoration: none;
+}
+a:visited {
+    color: #117da9;
+
+}
+a:hover {
+    color: #117da9;
+    text-decoration: underline;;
+}
+a:active {
+    color: #117da9;
+    text-decoration: underline;;
+}
+</style>
+<table>
+	<tr>
+		<th colspan="2">&nbspSelect&nbsp</td>
+		
+		<th colspan="2">&nbsp&nbspCard Number&nbsp&nbsp</td>
+		
+		<th colspan="2">&nbsp&nbsp Name On Card &nbsp&nbsp</td>
+		<th colspan="2">&nbsp&nbsp Exp Date &nbsp&nbsp</td>
+		
+	</tr>
+		<tr>
+		<td colspan="2"><input type="radio" value="3253821638712378" class="example" name ="num"></td>	
+		<td colspan="2">3253821638712378&nbsp&nbsp</td>	
+		
+		<td colspan="2">&nbspytian70</td>	
+		
+		<td colspan="2">&nbsp04/2018</td>	
+		
+	</tr>
+		<tr>
+		<td colspan="2"><input type="radio" value="4658124372189312" class="example" name ="num"></td>	
+		<td colspan="2">4658124372189312&nbsp&nbsp</td>	
+		
+		<td colspan="2">&nbspytian70</td>	
+		
+		<td colspan="2">&nbsp02/2018</td>	
+		
+	</tr>
+		<tr>
+		<td colspan="2"><input type="radio" value="5127846218648216" class="example" name ="num"></td>	
+		<td colspan="2">5127846218648216&nbsp&nbsp</td>	
+		
+		<td colspan="2">&nbspytian70</td>	
+		
+		<td colspan="2">&nbsp01/2018</td>	
+		
+	</tr>
+	
+</table>
+<div class="button">
+<form action"index.php?app-mypayment" method="post" style="display:inline; margin-right:10px;">
+	</br>
+	<button type="submit" name="num" value="" onclick = 'a(this)'> Delete</button>
+</form>
+
+<a href='index.php?app-aboutme'><button>Back</button></a>
+</div>

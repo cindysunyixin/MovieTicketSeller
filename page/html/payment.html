@@ -1,0 +1,265 @@
+
+
+<script type="text/javascript">
+	function isNumberKey(evt){
+	    var charCode = (evt.which) ? evt.which : evt.keyCode
+	    return !(charCode > 31 && (charCode < 48 || charCode > 57));
+	}
+	function check(a){
+		return a.length ==16;
+	}
+</script>
+
+<style type="text/css">
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td,th{
+	height: 30px;
+	width: 120px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+th{
+	background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2}
+
+tr:hover {
+	background-color: #ddd
+}
+
+
+button {
+  display: inline-block;
+ 	padding: 3px 14px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 125px;
+  box-shadow: 0 3px #999;
+}
+
+button:hover {background-color: #3e8e41}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.button, .title{
+	padding: 10px;
+  margin: auto;
+  text-align: center;
+}
+.movie_title{
+  margin: auto;
+  font-size: 35px;
+  
+}
+.rating{
+  display:block-inline;
+
+  color: #cc3333;  
+}
+.normal{
+  border:1px solid black;
+  width:80%; 
+  margin:auto; 
+  margin-left:100px;
+  padding: 10px 20px 10px 20px;
+}
+
+a:link {
+    color: #117da9;
+    text-decoration: none;
+}
+a:visited {
+    color: #117da9;
+
+}
+a:hover {
+    color: #117da9;
+    text-decoration: underline;;
+}
+a:active {
+    color: #117da9;
+    text-decoration: underline;;
+}
+</style>
+<style type="text/css">
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td,th{
+	height: 30px;
+	width: 120px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+th{
+	background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2}
+
+tr:hover {
+	background-color: #ddd
+}
+
+
+button {
+  display: inline-block;
+ 	padding: 3px 14px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 125px;
+  box-shadow: 0 3px #999;
+}
+
+button:hover {background-color: #3e8e41}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.button, .title{
+	padding: 10px;
+  margin: auto;
+  text-align: center;
+}
+.movie_title{
+  margin: auto;
+  font-size: 35px;
+  
+}
+.rating{
+  display:block-inline;
+
+  color: #cc3333;  
+}
+.normal{
+  border:1px solid black;
+  width:80%; 
+  margin:auto; 
+  margin-left:100px;
+  padding: 10px 20px 10px 20px;
+}
+
+a:link {
+    color: #117da9;
+    text-decoration: none;
+}
+a:visited {
+    color: #117da9;
+
+}
+a:hover {
+    color: #117da9;
+    text-decoration: underline;;
+}
+a:active {
+    color: #117da9;
+    text-decoration: underline;;
+}
+</style>
+
+
+<div class="normal">
+	<div class="title">
+	<span class='movie_title'>Payment</span>
+</div>
+
+<table>
+	
+	<tr>
+		<td style="width:1140px;"><b>The Secret Life of Pets</b></td>
+		<td style="width:1140px;"><b>AMC1</b></td>
+	</tr>
+	</b>
+	<tr>
+		<td>PG 90 min</td>
+		<td>111 Peachtree St,30031, Atlanta, GA, , </td>
+	</tr>
+	
+	<tr>
+		<td><b>2016-07-28</b></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><b>1:40PM</b></td>
+		<td></td>
+	</tr>
+	</b>
+</table>
+</br></br>
+
+<span>Payment Information</span>
+</br></br>
+
+<form action="index.php?app-payment" method="post">
+	<div>
+		 <span>Use a saved card </span> <select name="card">
+							<option value="0">1298741265192412</option>
+							<option value="1">3253821638712378</option>
+							<option value="2">3568172361278361</option>
+							<option value="3">4658124372189312</option>
+							<option value="4">5127846218648216</option>
+							</select>
+				&nbsp &nbsp
+			<button type = 'submit' value="1" name="use_card">buy ticket</button>
+	</div>
+</form>
+<form action="index.php?app-payment" method="post">
+	<div>
+		</br>
+		<legend>Use a new card</legend>
+	<table style="margin:0;">
+		<tr>
+			<td style="width:300px;"><span>Name on Card</span></td>
+			<td style="width:300px;">&nbsp&nbsp<input type ="text" name="args[name]"/></td>
+		</tr>
+
+		<tr>
+			<td><span>Card Number</span></td>
+			<td>&nbsp&nbsp<input type ="text" name="args[number]" onkeypress="return isNumberKey(event);" maxlength='16'/></td>
+		</tr>
+
+		<tr>
+			<td><span>CVV</span></td>
+			<td>&nbsp&nbsp<input type ="text" name="args[cvv]" onkeypress="return isNumberKey(event);" id="txt" maxlength='3'/></td>
+		</tr>
+
+		<tr>
+			<td><span>expiration Date</span></td>
+			<td>&nbsp&nbsp<input type ="month" name="args[expiration]"/></td>
+		</tr>
+		
+	</table>
+		</br>
+		<input type="checkbox" name ='save' value ='1'> <span>save this card </span> &nbsp&nbsp 
+		<button type="submit" value="1" name="add_card"> submit </button>
+	</div>
+</form>
+

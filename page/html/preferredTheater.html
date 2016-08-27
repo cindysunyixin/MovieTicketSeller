@@ -1,0 +1,244 @@
+
+<script type="text/javascript">
+	function a(button){
+		var radios = document.getElementsByClassName("a");
+		for (var i = 0; i < radios.length; i++) {
+    		if (radios[i].checked) {
+        		button.value = radios[i].value;
+    		}
+		}
+
+	}
+</script>
+<style type="text/css">
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td,th{
+	height: 30px;
+	width: 120px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+th{
+	background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2}
+
+tr:hover {
+	background-color: #ddd
+}
+
+
+button {
+  display: inline-block;
+ 	padding: 3px 14px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 125px;
+  box-shadow: 0 3px #999;
+}
+
+button:hover {background-color: #3e8e41}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.button, .title{
+	padding: 10px;
+  margin: auto;
+  text-align: center;
+}
+.movie_title{
+  margin: auto;
+  font-size: 35px;
+  
+}
+.rating{
+  display:block-inline;
+
+  color: #cc3333;  
+}
+.normal{
+  border:1px solid black;
+  width:80%; 
+  margin:auto; 
+  margin-left:100px;
+  padding: 10px 20px 10px 20px;
+}
+
+a:link {
+    color: #117da9;
+    text-decoration: none;
+}
+a:visited {
+    color: #117da9;
+
+}
+a:hover {
+    color: #117da9;
+    text-decoration: underline;;
+}
+a:active {
+    color: #117da9;
+    text-decoration: underline;;
+}
+</style>
+<style type="text/css">
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td,th{
+	height: 30px;
+	width: 120px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+th{
+	background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2}
+
+tr:hover {
+	background-color: #ddd
+}
+
+
+button {
+  display: inline-block;
+ 	padding: 3px 14px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 125px;
+  box-shadow: 0 3px #999;
+}
+
+button:hover {background-color: #3e8e41}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.button, .title{
+	padding: 10px;
+  margin: auto;
+  text-align: center;
+}
+.movie_title{
+  margin: auto;
+  font-size: 35px;
+  
+}
+.rating{
+  display:block-inline;
+
+  color: #cc3333;  
+}
+.normal{
+  border:1px solid black;
+  width:80%; 
+  margin:auto; 
+  margin-left:100px;
+  padding: 10px 20px 10px 20px;
+}
+
+a:link {
+    color: #117da9;
+    text-decoration: none;
+}
+a:visited {
+    color: #117da9;
+
+}
+a:hover {
+    color: #117da9;
+    text-decoration: underline;;
+}
+a:active {
+    color: #117da9;
+    text-decoration: underline;;
+}
+</style>
+<div class="normal" >
+	<div class="title">
+	<span class='movie_title'>My Prefered Theater</span>
+</div>
+		
+</br>
+		<div class="normal" style="border:none; margin-top:10px;">
+	<input type="radio" name="selected_theater" value="AMC1" class="a"><b>&nbsp&nbsp AMC1</b>
+
+</br>
+	<span>&nbsp&nbsp &nbsp&nbsp &nbsp111 Peachtree St,30031, Atlanta, GA</span>
+
+</div>
+		<div class="normal" style="border:none; margin-top:10px;">
+	<input type="radio" name="selected_theater" value="AMC2" class="a"><b>&nbsp&nbsp AMC2</b>
+
+</br>
+	<span>&nbsp&nbsp &nbsp&nbsp &nbsp112 Main St,14226, Buffalo, NY</span>
+
+</div>
+		<div class="normal" style="border:none; margin-top:10px;">
+	<input type="radio" name="selected_theater" value="AMC3" class="a"><b>&nbsp&nbsp AMC3</b>
+
+</br>
+	<span>&nbsp&nbsp &nbsp&nbsp &nbsp4486 Veterans Memorial Blvd, 70006, New Orlean, LA</span>
+
+</div>
+		<div class="normal" style="border:none; margin-top:10px;">
+	<input type="radio" name="selected_theater" value="AMC4" class="a"><b>&nbsp&nbsp AMC4</b>
+
+</br>
+	<span>&nbsp&nbsp &nbsp&nbsp &nbsp1910 Wells Rd,32073, Orange Park, FL</span>
+
+</div>
+		<div class="normal" style="border:none; margin-top:10px;">
+	<input type="radio" name="selected_theater" value="Regal Cinemas Atlantic Station 18 " class="a"><b>&nbsp&nbsp Regal Cinemas Atlantic Station 18 </b>
+
+</br>
+	<span>&nbsp&nbsp &nbsp&nbsp &nbsp261 19th St NW #1250,30363, Atlanta, GA</span>
+
+</div>
+		<div class="normal" style="border:none; margin-top:10px;">
+	<input type="radio" name="selected_theater" value="Regal Cinemas Hollywood 24 @ North I-85" class="a"><b>&nbsp&nbsp Regal Cinemas Hollywood 24 @ North I-85</b>
+
+</br>
+	<span>&nbsp&nbsp &nbsp&nbsp &nbsp3265 NE Expy NE, Chamblee,30341, Atlanta, GA</span>
+
+</div>
+	</br>
+
+<div class="button">
+<form action"index.php?app-preferred_theater" method="post" style="display:inline">
+	</br>
+	<button type="submit" name="name" value="" onclick = 'a(this)'> Delete</button>
+</form>
+
+<a href='index.php?app-aboutme'><button>Back</button></a>
+</div>
